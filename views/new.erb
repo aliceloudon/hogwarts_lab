@@ -1,21 +1,28 @@
 <form method="POST" action="/students">
-  <label for="first_name">First Name:</label>
-  <input type="text" name="first_name" id="first_name"/>
-
-  <label for="last_name">Last Name:</label>
-  <input type="text" name="last_name" id="last_name"/>
-
-  <label for="house">House:</label>
-  <select id="house" name="house">
-    <% houses = House.all %>
-    <% houses.each do |house| %>
-      <option value = "<% house.id %>"><%=house.name%></option>
-    <% end %>
-  </select>
-
-  <label for="age">Age:</label>
-  <input  min="1" type="number" name="age" id="age"/>
-
-  <input type="submit" name="Submit Student"/>
-
+  <ul class="flex-outer">
+    <li>
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" id="first_name"/>
+    </li>
+    <li>
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" id="last_name"/>
+    </li>
+    <li>
+      <label for="house_id">House:</label>
+      <select id="house_id" name="house_id">
+        <% houses = House.all %>
+        <% houses.each do |house| %>
+          <option value = "<%=house.id %>"><%=house.name%></option>
+        <% end %>
+      </select>
+    </li>
+    <li>
+      <label for="age">Age:</label>
+      <input  min="1" type="number" name="age" id="age"/>
+    </li>
+    <li>
+      <input type="submit" name="Submit Student"/>
+    </li>
+  </ul>
 </form>

@@ -1,9 +1,17 @@
+<div class="grid">
+<div class="grid-row">
+
 <% @students.each do |student| %>
+<div class="cell">
   <p>First Name: <%= student.first_name %></p>
   <p>Last Name: <%= student.last_name %></p>
-  <p>House: <%= student.house_id %></p>
+  <% house = House.find_by_id(student.house_id) %>
+  <p>House: <%= house.name %></p>
   <p>Age: <%= student.age %></p>
+  <img src=<%= house.logo %>/>
   <a href="/students/<%=student.id%>">Show Student</a>
-  <hr />
+  </div>  
 <% end %>
 
+</div>
+</div>

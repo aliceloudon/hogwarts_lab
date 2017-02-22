@@ -1,0 +1,64 @@
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  height: 50px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  color: white;
+  font-size: 18px;
+  font: "Courier New";
+}
+
+a {
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font: "Verdana";
+  font-size: 16px;
+  display: inline-block;
+  color: black;
+  text-transform: uppercase;
+}
+
+img {
+  display: block;
+  width: 200px;
+  height: 240px;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid-row {
+  flex-direction: row;
+}
+
+.cell {
+  flex: 1;
+  padding: 10px;
+  margin: 4px;
+  display: inline-block;
+  background-color: #f7e3a0;
+  size: 100%;
+  justify-content: space-around;
+}
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
